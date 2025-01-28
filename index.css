@@ -1,0 +1,51 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 40s linear infinite;
+}
+
+
+:root{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+  background: white;
+}
+
+li{
+  list-style: none;
+  cursor: pointer;
+  position: relative;
+}
+
+li:hover::before{
+position: absolute;
+content: '';
+height: 4px;
+width: 100%;
+background: #2a68ff;
+right: 0;
+bottom: -10px;
+color: #2a68ff;
+}
+
+.icon{
+  cursor: pointer;
+}
+
+.card{
+  background:lightgrey;
+}
